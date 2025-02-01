@@ -25,9 +25,12 @@ Route::middleware([
     PreventAccessFromCentralDomains::class,
 ])->group(function () {
     Route::get('/', function () {
-        dd(\App\Models\User::all()->toarray());
         return 'This is your multi-tenant application. The id of the current tenant is ' . tenant('id');
     });
+
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('tenancy.dashboard');
 
     Route::get('login', [AuthenticatedSessionController::class, 'create'])
     ->name('login');

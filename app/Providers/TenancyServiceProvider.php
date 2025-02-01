@@ -104,6 +104,10 @@ class TenancyServiceProvider extends ServiceProvider
         $this->mapRoutes();
 
         $this->makeTenancyMiddlewareHighestPriority();
+
+        \Stancl\Tenancy\Middleware\InitializeTenancyByDomain::$onFail = function () {
+            return redirect(env('APP_URL'));
+        };
     }
 
     protected function bootEvents()
