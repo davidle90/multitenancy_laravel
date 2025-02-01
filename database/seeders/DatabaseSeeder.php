@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\CentralUser;
+use App\Models\Item;
 use App\Models\Tenant;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -31,6 +32,7 @@ class DatabaseSeeder extends Seeder
 
         Tenant::all()->runForEach(function () {
             User::factory()->create();
+            Item::create(['name' => 'TEST_ITEM']);
         });
     }
 }

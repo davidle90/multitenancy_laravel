@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::domain('admin.localhost')->group(function () {
+
+    // TODO: add routes for managing all tenants
+
     Route::get('/', function () {
         return view('welcome');
     });
