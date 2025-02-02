@@ -16,6 +16,6 @@
     </div>
 
     <div id="app">
-        <Counter></Counter>
+        <test-grid><test-grid>
     </div>
 </x-app-layout>
