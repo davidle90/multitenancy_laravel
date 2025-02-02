@@ -13,6 +13,8 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        <script src="dist/grid-layout-plus.js"></script>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -44,4 +46,6 @@
             </main>
         </div>
     </body>
+
+    <script src="dist/grid-layout-plus.js"></script>
 </html>
