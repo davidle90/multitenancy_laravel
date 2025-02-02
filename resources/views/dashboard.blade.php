@@ -14,4 +14,8 @@
             </div>
         </div>
     </div>
+
+    <div id="app">
+        <Counter></Counter>
+    </div>
 </x-app-layout>
