@@ -28,14 +28,17 @@
         @yield('modals')
 
         <!-- Main -->
-        <main class="grow">
-            <div class="sm:ml-64">
-                <div class="flex">
-                    <div class="h-screen grow flex">
-                        <div class="w-full">
-                            @yield('content')
-                        </div>
-                    </div>
+        <main class="d-flex vh-100">
+            <!-- Sidebar -->
+            @include('layouts.main_layout.navbar')
+
+            <!-- Content Area -->
+            <div class="flex-grow-1 d-flex flex-column">
+                <div class="p-4 bg-light">
+                    @include('layouts.main_layout.header')
+                </div>
+                <div class="container-fluid flex-grow-1 py-3 overflow-auto">
+                    @yield('content')
                 </div>
             </div>
         </main>

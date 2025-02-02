@@ -29,10 +29,10 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerate();
 
         if (tenant()) {
-            return redirect()->route('tenancy.dashboard');
+            return redirect()->route('tenant.index');
         }
 
-        return redirect()->intended(route('admin.dashboard', absolute: false));
+        return redirect()->intended(route('admin.index', absolute: false));
     }
 
     /**
