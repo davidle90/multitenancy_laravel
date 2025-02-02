@@ -5,7 +5,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::domain('admin.localhost')->group(function () {
+Route::domain('admin.'.env('APP_DOMAIN'))->group(function () {
 
     // TODO: add routes for managing all tenants
 
@@ -33,7 +33,7 @@ Route::domain('admin.localhost')->group(function () {
     });
 });
 
-Route::domain('localhost')->group(function () {
+Route::domain(env('APP_DOMAIN'))->group(function () {
     Route::get('/', function () {
         return view('welcome');
     });
